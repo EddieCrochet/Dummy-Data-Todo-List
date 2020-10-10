@@ -42,10 +42,9 @@ const populateTodos = () => {
     buttons.push(button);
     console.log(buttons);
     console.log(buttons[i]);
-    buttons[i].onclick = () => {
-      console.log(node);
-      node.classList.add("incomplete");
-      node.classList.remove("completed");
+    buttons[i].onclick = (e) => {
+      buttons[i].parentElement.classList.add("completed");
+      buttons[i].parentElement.classList.remove("incomplete");
     };
 
     if (arrayOfTodos[i].completed == false) {
